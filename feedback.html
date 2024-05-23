@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzariffic - Feedback</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="icon"
+      href="assets/images/pizzarifficicon.jpg"
+      type="image/jpeg"
+    />
+    <style>
+      .rating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+      }
+
+      .rating input {
+        display: none;
+      }
+
+      .rating label {
+        cursor: pointer;
+        width: 1em;
+        font-size: 2rem;
+        color: #ffd700;
+        text-shadow: 1px 1px #bbb;
+      }
+
+      .rating input:checked ~ label,
+      .rating:not(:checked) > label:hover,
+      .rating:not(:checked) > label:hover ~ label {
+        color: #ffd700;
+      }
+
+      .rating input:checked + label:hover,
+      .rating input:checked + label:hover ~ label,
+      .rating input:checked ~ label:hover,
+      .rating input:checked ~ label:hover ~ label,
+      .rating label:hover ~ input:checked ~ label {
+        color: #ffd700;
+        text-shadow: 1px 1px #c60;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      style="
+        background-image: url('assets/images/pizzarificbanner3.jpg');
+        background-size: cover;
+      "
+    >
+      <nav>
+        <ul
+          style="
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+          "
+        >
+          <li style="margin: 0 15px"><a href="index.html">Home</a></li>
+          <li style="margin: 0 15px"><a href="product.html">Products</a></li>
+          <li style="margin: 0 15px"><a href="about.html">About Us</a></li>
+          <li style="margin: 0 15px"><a href="contact.html">Contact Us</a></li>
+          <li style="margin: 0 15px"><a href="sitemap.html">Site Map</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1>Feedback Form</h1>
+        <p>
+          We value your feedback! Please let us know how we are doing and how we
+          can improve our services. Your feedback helps us enhance your
+          experience.
+        </p>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone (optional):</label>
+          <input type="text" id="phone" name="phone" />
+
+          <h2>Rate Us</h2>
+
+          <label for="look-feel">Look and Feel:</label>
+          <div class="rating">
+            <input
+              type="radio"
+              id="lookfeel5"
+              name="lookfeel"
+              value="5"
+            /><label for="lookfeel5">★</label>
+            <input
+              type="radio"
+              id="lookfeel4"
+              name="lookfeel"
+              value="4"
+            /><label for="lookfeel4">★</label>
+            <input
+              type="radio"
+              id="lookfeel3"
+              name="lookfeel"
+              value="3"
+            /><label for="lookfeel3">★</label>
+            <input
+              type="radio"
+              id="lookfeel2"
+              name="lookfeel"
+              value="2"
+            /><label for="lookfeel2">★</label>
+            <input
+              type="radio"
+              id="lookfeel1"
+              name="lookfeel"
+              value="1"
+            /><label for="lookfeel1">★</label>
+          </div>
+
+          <label for="content">Content:</label>
+          <div class="rating">
+            <input type="radio" id="content5" name="content" value="5" /><label
+              for="content5"
+              >★</label
+            >
+            <input type="radio" id="content4" name="content" value="4" /><label
+              for="content4"
+              >★</label
+            >
+            <input type="radio" id="content3" name="content" value="3" /><label
+              for="content3"
+              >★</label
+            >
+            <input type="radio" id="content2" name="content" value="2" /><label
+              for="content2"
+              >★</label
+            >
+            <input type="radio" id="content1" name="content" value="1" /><label
+              for="content1"
+              >★</label
+            >
+          </div>
+
+          <label for="ux-ui">UX/UI:</label>
+          <div class="rating">
+            <input type="radio" id="uxui5" name="uxui" value="5" /><label
+              for="uxui5"
+              >★</label
+            >
+            <input type="radio" id="uxui4" name="uxui" value="4" /><label
+              for="uxui4"
+              >★</label
+            >
+            <input type="radio" id="uxui3" name="uxui" value="3" /><label
+              for="uxui3"
+              >★</label
+            >
+            <input type="radio" id="uxui2" name="uxui" value="2" /><label
+              for="uxui2"
+              >★</label
+            >
+            <input type="radio" id="uxui1" name="uxui" value="1" /><label
+              for="uxui1"
+              >★</label
+            >
+          </div>
+
+          <label for="performance">Performance:</label>
+          <div class="rating">
+            <input
+              type="radio"
+              id="performance5"
+              name="performance"
+              value="5"
+            /><label for="performance5">★</label>
+            <input
+              type="radio"
+              id="performance4"
+              name="performance"
+              value="4"
+            /><label for="performance4">★</label>
+            <input
+              type="radio"
+              id="performance3"
+              name="performance"
+              value="3"
+            /><label for="performance3">★</label>
+            <input
+              type="radio"
+              id="performance2"
+              name="performance"
+              value="2"
+            /><label for="performance2">★</label>
+            <input
+              type="radio"
+              id="performance1"
+              name="performance"
+              value="1"
+            /><label for="performance1">★</label>
+          </div>
+
+          <label for="accessibility">Accessibility:</label>
+          <div class="rating">
+            <input
+              type="radio"
+              id="accessibility5"
+              name="accessibility"
+              value="5"
+            /><label for="accessibility5">★</label>
+            <input
+              type="radio"
+              id="accessibility4"
+              name="accessibility"
+              value="4"
+            /><label for="accessibility4">★</label>
+            <input
+              type="radio"
+              id="accessibility3"
+              name="accessibility"
+              value="3"
+            /><label for="accessibility3">★</label>
+            <input
+              type="radio"
+              id="accessibility2"
+              name="accessibility"
+              value="2"
+            /><label for="accessibility2">★</label>
+            <input
+              type="radio"
+              id="accessibility1"
+              name="accessibility"
+              value="1"
+            /><label for="accessibility1">★</label>
+          </div>
+
+          <label for="overall">Overall Experience:</label>
+          <div class="rating">
+            <input type="radio" id="overall5" name="overall" value="5" /><label
+              for="overall5"
+              >★</label
+            >
+            <input type="radio" id="overall4" name="overall" value="4" /><label
+              for="overall4"
+              >★</label
+            >
+            <input type="radio" id="overall3" name="overall" value="3" /><label
+              for="overall3"
+              >★</label
+            >
+            <input type="radio" id="overall2" name="overall" value="2" /><label
+              for="overall2"
+              >★</label
+            >
+            <input type="radio" id="overall1" name="overall" value="1" /><label
+              for="overall1"
+              >★</label
+            >
+          </div>
+
+          <label for="message">Additional Comments:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <label for="screenshot">Upload Screenshot (optional):</label>
+          <input type="file" id="screenshot" name="screenshot" />
+
+          <p>
+            Your feedback is confidential and will be used only to improve our
+            services.
+          </p>
+          <input type="submit" value="Submit Feedback" />
+        </form>
+      </section>
+      <section class="promos">
+        <h2>Special Offers</h2>
+        <div class="promo">
+          <img src="assets/images/promohandpizza.jpg" alt="Handcrafted Pizza" />
+          <p>
+            Enjoy our handcrafted pizzas with special discounts this weekend!
+          </p>
+        </div>
+        <div class="promo">
+          <img
+            src="assets/images/promopepperonipizza.jpg"
+            alt="Pepperoni Pizza"
+          />
+          <p>Get a free drink with every Pepperoni Pizza order!</p>
+        </div>
+      </section>
+    </main>
+    <footer
+      style="
+        background-image: url('assets/images/pizzarificbanner1.jpg');
+        background-size: cover;
+      "
+    >
+      <p>&copy; 2024 Pizzariffic. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
